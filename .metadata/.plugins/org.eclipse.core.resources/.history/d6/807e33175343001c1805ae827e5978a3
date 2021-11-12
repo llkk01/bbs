@@ -1,0 +1,5 @@
+package mms.memver.dao;
+
+public class MemberDAO {
+
+}

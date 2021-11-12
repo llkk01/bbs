@@ -1,0 +1,12 @@
+package mms.memver.vo;
+
+public class Member {
+	
+	private int id;
+	private String name; //식별값
+	private String addr;
+	private String nation;
+	private String email;
+	private int age;
+
+}

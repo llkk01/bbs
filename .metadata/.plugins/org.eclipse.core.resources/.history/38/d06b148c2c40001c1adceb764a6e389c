@@ -1,0 +1,91 @@
+package plsql;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.xml.transform.Result;
+
+public class ProcedureTest {
+
+	Connection con;
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Driver가 없음: 해당 클래스를 찾을 수 없습니다.");
+		}
+	}
+
+	public void connect() {
+		try {
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "javalink", "javalink");
+			System.out.println("Connection Success!");
+		} catch (SQLException e) {
+			System.out.println("주소,ID,PW가 다릅니다.");
+		}
+	}
+
+	// 저장프로시저 호출전 데이터 입력
+	public void insert() {
+		PreparedStatement pstmt = null;
+		connect();
+		String sql =  "insert into member3 values(?,?,?,?,?,?)";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, "Alpha");
+			pstmt.setString(2, "1234");
+			pstmt.setString(3, "Al");
+			pstmt.setString(4, "20");
+			pstmt.setString(5, "LA");
+			pstmt.setString(6, "Alpha@aa.com");
+		
+			int count = pstmt.executeUpdate();
+			if(count > 0) {
+				System.out.println("insert success!!!");
+			} else {
+				System.out.println("insert fail!!!");
+			} 
+			
+		} catch (SQLException e) {
+			
+		} finally {
+			try {
+				pstmt.close();
+				con.close();
+			} catch (SQLException e) {
+	
+			}
+		}
+	}
+
+	public void select() {
+		PreparedStatement pstmt = null;
+		Result rs = null
+		String sql = "select * from member3";
+		connect();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+		} catch (SQLException e) {
+			
+		}
+			
+	}
+
+	// 저장프로시저 호출 후 데이터 입력
+	public void insertMember() {
+
+	}
+
+	
+	public static void main(String[] args) {
+		
+		ProcedureTest pt = new ProcedureTest();
+		
+		
+	}
+
+}

@@ -1,0 +1,38 @@
+package plsql;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Types;
+
+public class CallInoutProc {
+	
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+		
+		String p1value = new String("a");
+	    String p2value = new String("b");
+	    String p3value;
+
+	    
+	 // 2.계정연결
+	 	Connection conn = DriverManager.getConnection(url, "javalink", "javalink");
+	 	CallableStatement cs = conn.prepareCall("{call compute_power(?,?,?)}");
+	 		
+	 	cs.setString(1, p1value);
+	 	cs.setString(2, p2value);
+	 		
+	 	cs.registerOutParameter(2, Types.INTEGER);
+	 	cs.registerOutParameter(3, Types.INTEGER);
+	 		
+	 	cs.execute();
+	 		
+	 	p2value = cs.getString(2);
+	 	p3value = cs.getString(3);
+	 		
+	 	System.out.println(p1value + " ^ " + p2value + " = " + p3value);
+	}
+}
