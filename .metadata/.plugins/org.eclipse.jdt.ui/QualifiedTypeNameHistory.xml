@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="study07_DB.CRUDTest"/>
     <fullyQualifiedTypeName name="test2.login.LoginSVC"/>
     <fullyQualifiedTypeName name="test2.login.User"/>
-    <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="test3.SampleDAO"/>
@@ -15,7 +14,6 @@
     <fullyQualifiedTypeName name="test4.mvc.dao.Dao"/>
     <fullyQualifiedTypeName name="test4.mvc.util.DBConnect"/>
     <fullyQualifiedTypeName name="test4.mvc.dao.OracleDao"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
     <fullyQualifiedTypeName name="test4.mvc.dto.Product"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
@@ -23,9 +21,17 @@
     <fullyQualifiedTypeName name="java.sql.Types"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
-    <fullyQualifiedTypeName name="mms.memver.action.Action"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="mms.memver.vo.Member"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="mms.memver.controller.MemberController"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="mms.memver.action.Action"/>
+    <fullyQualifiedTypeName name="mms.memver.action.MemberAddAction"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="mms.memver.dao.MemberDAO"/>
+    <fullyQualifiedTypeName name="mms.memver.db.JdbcUtil"/>
+    <fullyQualifiedTypeName name="mms.memver.util.ConsoleUtil"/>
+    <fullyQualifiedTypeName name="mms.memver.vo.Member"/>
+    <fullyQualifiedTypeName name="mms.memver.svc.MemberAddService"/>
 </qualifiedTypeNameHistroy>

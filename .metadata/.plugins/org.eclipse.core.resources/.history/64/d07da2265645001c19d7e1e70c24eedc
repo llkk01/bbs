@@ -1,0 +1,49 @@
+package mms.memver.dao;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import mms.memver.vo.Member;
+
+// 9. Oracle DB로 필요한 SQL구문을 전송하는 클래스 구현
+public class MemberDAO {
+
+	Connection con;
+	Statement stmt;
+
+	public MemberDAO(Connection con) {
+		this.con = con;
+	}
+
+	public int insertNewMember(Member newMember) {
+		
+		String query = "insert into mms_member values(id,name,addr,nation,email,age)";
+		
+		int count = stmt.executeUpdate(query);
+		if(count > 0) {
+			System.out.println("데이터가 저장되었습니다.");
+		} else {
+			System.out.println("데이터가 저장되지 않았습니다.");
+		}
+		return newMember;
+		
+	}
+
+	public ArrayList<Member> selectMemberList() {
+
+	}
+
+	public Member selectOldMember(String name) {
+
+	}
+
+	public int updateMember(Member updateMember) {
+
+	}
+
+	public int deleteMember(String name) {
+
+	}
+
+}

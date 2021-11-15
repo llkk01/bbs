@@ -9,6 +9,14 @@ public class Member {
 	private String email;
 	private int age;
 	
+	public Member(String name, String addr, String nation, String email, int age) {
+		super();
+		this.name = name;
+		this.addr = addr;
+		this.nation = nation;
+		this.email = email;
+		this.age = age;
+	}
 	public int getId() {
 		return id;
 	}
@@ -45,4 +53,13 @@ public class Member {
 	public void setAge(int age) {
 		this.age = age;
 	}	
+	
+	@Override
+	public String toString() {
+		String result = "name =" +name + "addr =" +addr
+						+ "nation =" +nation + "email =" +email
+						+ "age =" +age;
+		return result;
+		
+	}
 }

@@ -1,0 +1,24 @@
+package mms.memver.ui;
+
+import java.util.Scanner;
+
+import mms.memver.controller.MemberController;
+
+public class MemberUI {
+	
+	boolean isStop = false;
+	
+	MemberController memberController = new MemberController();
+	
+	Scanner sc = new Scanner(System.in);
+	
+	
+	do {
+
+
+
+	} while (!isStop);
+
+	
+	
+}

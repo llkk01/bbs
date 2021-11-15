@@ -20,14 +20,14 @@ public class DBConnection_Insert {
 
 			conn = DriverManager.getConnection(url, "javalink", "javalink");
 			stmt = conn.createStatement();
-			
+
 			String query = "insert into goodsinfo values('33333','OLED TV2','735000','LG')";
+
 			int count = stmt.executeUpdate(query);
-			if(count > 0) {
+			if (count > 0)
 				System.out.println("데이터가 저장되었습니다.");
-			} else {
+			else
 				System.out.println("데이터가 저장되지 않았습니다.");
-			}
 
 		} catch (ClassNotFoundException e) {
 			System.out.println("Driver가 없음:: 해당 클래스를 찾을 수 없습니다.");
@@ -42,5 +42,7 @@ public class DBConnection_Insert {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
+
 }
