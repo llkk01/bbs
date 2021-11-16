@@ -3,6 +3,7 @@ package mms.memver.db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -61,18 +62,15 @@ public class JdbcUtil {
 			e.printStackTrace();
 		}
 	}
-	public static void close(Connection con){
+	public static void close(ResultSet rs){
 		try{
-			con.close();
+			rs.close();
 		}
 		catch(SQLException e){
 			e.printStackTrace();
 		}
 	}
 	
-
-
-
 
 	//transaction 처리 메소드
 	public static void commit(Connection con) {

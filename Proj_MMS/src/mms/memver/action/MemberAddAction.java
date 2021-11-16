@@ -11,7 +11,7 @@ public class MemberAddAction implements Action {
 	@Override
 	public void execute(Scanner sc) throws Exception {
 		ConsoleUtil cu = new ConsoleUtil();
-		Member newMever = cu.getNewMember(sc); //회원등록 입력 완성 내용
+		Member newMever = cu.getMember(sc); //회원등록 입력 완성 내용
 		
 		MemberAddService memberAddService  = new MemberAddService();
 		boolean isAddSuccess = memberAddService.addMember(newMever);

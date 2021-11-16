@@ -46,7 +46,5 @@ public class MemberUI {
 
 		} while (!isStop);
 
-		sc.close();
-
 	}
 }

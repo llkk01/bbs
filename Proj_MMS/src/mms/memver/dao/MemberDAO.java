@@ -32,7 +32,6 @@ public class MemberDAO {
 			pstmt.setString(3, newMember.getNation());
 			pstmt.setString(4, newMember.getEmail());
 			pstmt.setInt(5, newMember.getAge());
-			
 
 			insertCount = pstmt.executeUpdate();
 			

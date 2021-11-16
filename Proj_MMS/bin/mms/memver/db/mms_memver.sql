@@ -1,4 +1,4 @@
--- javalink/javalink
+맥 monterey sqldeveloper 오류-- javalink/javalink
 
 CREATE TABLE mms_member(
 	id number primary key,

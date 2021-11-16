@@ -9,9 +9,8 @@ import mms.memver.vo.Member;
 // 키보드 입력
 public class ConsoleUtil {
 	
-	Scanner sc = new Scanner(System.in);
 	
-	public Member getNewMember(Scanner sc) {
+	public Member getMember(Scanner sc) {
 		System.out.println("등록할 회원정보를 입력하세요 : ");
 		
 		System.out.println("이름 :");

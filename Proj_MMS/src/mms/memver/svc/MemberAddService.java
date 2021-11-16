@@ -11,18 +11,19 @@ public class MemberAddService {
 	
 	public boolean addMember(Member newMember) throws Exception{
 		
-		Connection con = JdbcUtil.getConnection();
+		boolean isInsertSuccess = false;
+		Connection con =  JdbcUtil.getConnection();
 		MemberDAO memberDAO = new MemberDAO(con);
-		boolean isInsertSucces = false;
-		
-		int insertCount = memberDAO.insertNewMember(newMember);
+		int insertCount =  memberDAO.insertNewMember(newMember);
 		if(insertCount > 0) {
 			JdbcUtil.commit(con);
-			isInsertSucces = true;
-		} else {
-			JdbcUtil.rollback(con);
+			isInsertSuccess = true;
+		}else {
+			JdbcUtil.rollback(con);;
 		}
-		return isInsertSucces;
+	
+		return isInsertSuccess;
+		
 	}
 
 }
