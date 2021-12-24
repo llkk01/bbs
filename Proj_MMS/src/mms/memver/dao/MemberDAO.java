@@ -51,7 +51,11 @@ public class MemberDAO {
 	
 	// 2.회원 목록 보기
 	public ArrayList<Member> selectMemberList() {
-		return null;
+		
+		ArrayList<Member> memberList = new ArrayList<Member>();
+		
+		
+		return memberList;
 	}
 	
 	// 3.특정 회원 정보 보기
